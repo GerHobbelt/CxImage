@@ -58,6 +58,10 @@
   #include <arpa/inet.h>
 #endif
 
+#if defined(WIN32) || defined(_WIN32)
+#include "tchar.h"
+#endif
+
 /////////////////////////////////////////////////////////////////////////////
 #include "xfile.h"
 #include "xiofile.h"
@@ -777,9 +781,11 @@ public:
 	CxImage* GetLayer(int32_t position);
 	CxImage* GetParent() const;
 	int32_t GetNumLayers() const;
+#if CXIMAGE_SUPPORT_WINDOWS
 	int32_t LayerDrawAll(HDC hdc, int32_t x=0, int32_t y=0, int32_t cx = -1, int32_t cy = -1, RECT* pClipRect = 0, bool bSmooth = false);
 	int32_t LayerDrawAll(HDC hdc, const RECT& rect, RECT* pClipRect=NULL, bool bSmooth = false);
-//@}
+#endif
+	//@}
 #endif //CXIMAGE_SUPPORT_LAYERS
 
 protected:

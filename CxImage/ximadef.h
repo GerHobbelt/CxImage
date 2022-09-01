@@ -53,7 +53,7 @@
  #define CXIMAGE_SUPPORT_WMF 0
 #endif
 
-#if !defined(WIN32) && !defined(_WIN32_WCE)
+#if !defined(WIN32) && !defined(WIN64) && !defined(_WIN32_WCE)
  #undef CXIMAGE_SUPPORT_WINDOWS
  #define CXIMAGE_SUPPORT_WINDOWS 0
 #endif
@@ -120,6 +120,10 @@ typedef void*      HRGN;
 #define	BOOL bool
 #endif
 
+#ifndef BYTE
+#define BYTE   uint8_t
+#endif
+
 #ifndef TRUE
 #define	TRUE true
 #endif
@@ -128,9 +132,20 @@ typedef void*      HRGN;
 #define	FALSE false
 #endif
 
+#if !defined(UNICODE) && !defined(_UNICODE)
 #ifndef TCHAR
 #define TCHAR char
+#endif
+#ifndef _T
 #define _T
+#endif
+#else
+#ifndef TCHAR
+#define TCHAR wchar_t
+#endif
+#ifndef _T
+#define _T(s)	s##L
+#endif
 #endif
 
 typedef struct tagRECT
