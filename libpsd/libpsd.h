@@ -255,7 +255,7 @@ typedef enum {
 	psd_layer_effects_bevel_emboss_inner_shadow,
 	psd_layer_effects_bevel_emboss_inner_light,
 	psd_layer_effects_bevel_emboss_texture
-};
+} psd_layer_effects_bevel_emboss_type;
 #define psd_layer_effects_image_count		(psd_layer_effects_bevel_emboss_texture + 1)
 
 typedef enum {
@@ -328,9 +328,9 @@ typedef struct _psd_stream
 typedef struct _psd_resolution_info
 {
 	psd_float					hres;			// Horizontal resolution in pixels per inch.
-	psd_short					hres_unit;		// 1=display horitzontal resolution in pixels per inch; 2=display horitzontal resolution in pixels per cm.
+	psd_short					hres_unit;		// 1=display horizontal resolution in pixels per inch; 2=display horizontal resolution in pixels per cm.
 	psd_short					width_unit;		// Display width as 1=inches; 2=cm; 3=points; 4=picas; 5=columns.
-	psd_float					vres;			// Vertial resolution in pixels per inch.
+	psd_float					vres;			// Vertical resolution in pixels per inch.
 	psd_short					vres_unit;		// 1=display vertical resolution in pixels per inch; 2=display vertical resolution in pixels per cm.
 	psd_short					height_unit;	// Display height as 1=inches; 2=cm; 3=points; 4=picas; 5=columns.
 } psd_resolution_info;
@@ -677,7 +677,7 @@ typedef struct _psd_layer_levels
 	// Photoshop CS (8.0) Additional information
 	// At the end of the Version 2 file is the following information:
 	psd_ushort					extra_level_count;	// Count of total level record structures. Subtract the legacy number of level record structures, 29, to determine how many are remaining in the file for reading.
-	psd_layer_level_record *	extra_record;		// Additianol level records according to count
+	psd_layer_level_record *	extra_record;		// Additional level records according to count
 	psd_uchar					lookup_table[3][256];
 } psd_layer_levels;
 
@@ -982,7 +982,7 @@ typedef struct _psd_layer_effects_bevel_emboss
 	psd_blend_mode				highlight_blend_mode;		// Highlight blend mode: 4 bytes for signature and 4 bytes for the key
 	psd_argb_color				highlight_color;
 	psd_argb_color				real_highlight_color;
-	psd_uchar					highlight_opacity;			// Hightlight opacity as a percent
+	psd_uchar					highlight_opacity;			// Highlight opacity as a percent
 	psd_blend_mode				shadow_blend_mode;			// Shadow blend mode: 4 bytes for signature and 4 bytes for the key
 	psd_argb_color				shadow_color;
 	psd_argb_color				real_shadow_color;

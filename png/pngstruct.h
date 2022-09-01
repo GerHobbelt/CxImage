@@ -143,13 +143,13 @@ struct png_struct_def
 #endif
 
 #if defined(PNG_READ_SHIFT_SUPPORTED) || defined(PNG_WRITE_SHIFT_SUPPORTED)
-   png_color_8 shift;         /* shift for significant bit tranformation */
+   png_color_8 shift;         /* shift for significant bit transformation */
 #endif
 
 #if defined(PNG_tRNS_SUPPORTED) || defined(PNG_READ_BACKGROUND_SUPPORTED) \
  || defined(PNG_READ_EXPAND_SUPPORTED) || defined(PNG_READ_BACKGROUND_SUPPORTED)
-   png_bytep trans_alpha;           /* alpha values for paletted files */
-   png_color_16 trans_color;  /* transparent color for non-paletted files */
+   png_bytep trans_alpha;           /* alpha values for palleted files */
+   png_color_16 trans_color;  /* transparent color for non-palleted files */
 #endif
 
    png_read_status_ptr read_row_fn;   /* called after each row is decoded */
