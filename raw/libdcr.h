@@ -215,7 +215,9 @@ struct dcr_DCRAW {
 	int histogram[4][0x2000];
 	void (*write_thumb)(DCRAW *, FILE *), (*write_fun)(DCRAW *, FILE *);
 	void (*load_raw)(DCRAW *), (*thumb_load_raw)(DCRAW *);
+#if !CXIMAGE_SUPPORT_EXCEPTION_HANDLING
 	jmp_buf failure;
+#endif
 	char *sz_error;
 };
 

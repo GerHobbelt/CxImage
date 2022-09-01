@@ -43,10 +43,12 @@ bool CxImageRAW::Decode(CxFile *hFile)
 		cx_throw("CxImageRAW: unknown option");
 	}
 
+#if !CXIMAGE_SUPPORT_EXCEPTION_HANDLING
 	// set return point for error handling
 	if (setjmp (dcr.failure)) {
 		cx_throw("");
 	}
+#endif
 
 	// install file manager
 	CxFileRaw src(hFile,&dcr);
@@ -247,10 +249,12 @@ bool CxImageRAW::GetExifThumbnail(const TCHAR *filename, const TCHAR *outname, i
 		cx_throw("CxImageRAW: unknown option");
 	}
 
+#if !CXIMAGE_SUPPORT_EXCEPTION_HANDLING
 	// set return point for error handling
 	if (setjmp (dcr.failure)) {
 		cx_throw("");
 	}
+#endif
 
 	// install file manager
 	CxFileRaw src(&file,&dcr);
