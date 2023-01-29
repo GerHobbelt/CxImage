@@ -12,8 +12,6 @@
  * is shoved onto the user.
  */
 
-#if !defined(BUILD_MONOLITHIC)
-
 #define JPEG_INTERNALS
 #include "jinclude.h"
 #include "jpeglib.h"
@@ -276,5 +274,3 @@ jpeg_mem_term (j_common_ptr cinfo)
 {
   /* no work */
 }
-
-#endif // !defined(BUILD_MONOLITHIC)
