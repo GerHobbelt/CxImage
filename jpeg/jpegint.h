@@ -292,6 +292,7 @@ struct jpeg_color_quantizer {
 
 /* Short forms of external names for systems with brain-damaged linkers. */
 
+#if 0
 #ifdef NEED_SHORT_EXTERNAL_NAMES
 #define jinit_compress_master	jICompress
 #define jinit_c_master_control	jICMaster
@@ -334,6 +335,7 @@ struct jpeg_color_quantizer {
 #define jpeg_natural_order2	jZAGTable2
 #define jpeg_aritab		jAriTab
 #endif /* NEED_SHORT_EXTERNAL_NAMES */
+#endif
 
 
 /* Compression module initialization routines */
