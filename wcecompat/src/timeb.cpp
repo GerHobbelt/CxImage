@@ -21,9 +21,12 @@
 
 #include <sys/timeb.h>
 
+#if !( /* Win32/MSVC: ftime() already implemented under these conditions */ defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES && !defined _CRT_NO_TIME_T )
 
 int ftime(struct timeb* tp)
 {
 	// TODO: implement
 	return -1;
 }
+
+#endif
