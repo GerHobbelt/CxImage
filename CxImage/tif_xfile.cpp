@@ -11,8 +11,8 @@
 
 #if CXIMAGE_SUPPORT_TIF
 
-#include "../tiff/tiffiop.h"
-#include "../tiff/tiffvers.h"
+#include <tiffiop.h>
+#include <tiffvers.h>
 
 #include "xfile.h"
 

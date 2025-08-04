@@ -34,7 +34,7 @@
 #define CXIMAGE_SUPPORT_PNM 1
 #define CXIMAGE_SUPPORT_RAS 1
 
-#define CXIMAGE_SUPPORT_JBG 0		// GPL'd see ../jbig/copying.txt & ../jbig/patents.htm
+#define CXIMAGE_SUPPORT_JBG 1		// GPL'd see ../jbig/copying.txt & ../jbig/patents.htm
 
 #define CXIMAGE_SUPPORT_MNG 1
 #define CXIMAGE_SUPPORT_SKA 1
