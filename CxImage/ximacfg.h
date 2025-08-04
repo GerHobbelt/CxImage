@@ -12,7 +12,7 @@
 
 #define CXIMAGE_SUPPORT_DECODE	1
 #define CXIMAGE_SUPPORT_ENCODE	1		//<vho><T.Peck>
-#define	CXIMAGE_SUPPORT_WINDOWS 0       // classic MFC interfaces
+#define	CXIMAGE_SUPPORT_WINDOWS 1
 #define	CXIMAGE_SUPPORT_EXIF    1
 
 /////////////////////////////////////////////////////////////////////////////

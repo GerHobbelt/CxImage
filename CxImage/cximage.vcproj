@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9.00"
+	Version="8.00"
 	Name="CxImage"
 	ProjectGUID="{C739151F-5384-41DF-A1A6-F089E2C1AD56}"
-	RootNamespace="CxImage"
 	Keyword="MFCProj"
-	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
 		<Platform
@@ -170,8 +168,8 @@
 		</Configuration>
 		<Configuration
 			Name="Unicode Debug|Win32"
-			OutputDirectory="$(SolutionDir)output\$(ConfigurationName)\x86\"
-			IntermediateDirectory="$(ConfigurationName)\x86\"
+			OutputDirectory=".\Unicode_Debug"
+			IntermediateDirectory=".\Unicode_Debug"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="2"
@@ -200,7 +198,11 @@
 				PreprocessorDefinitions="_LIB;JAS_WIN_MSVC_BUILD;WIN32;_DEBUG;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="1"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=".\Unicode_Debug/cximage.pch"
+				AssemblerListingLocation=".\Unicode_Debug/"
+				ObjectFile=".\Unicode_Debug/"
+				ProgramDataBaseFileName=".\Unicode_Debug/"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 				DebugInformationFormat="4"
@@ -218,6 +220,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile=".\Unicode_Debug\cximage.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -240,8 +243,8 @@
 		</Configuration>
 		<Configuration
 			Name="Unicode Debug|x64"
-			OutputDirectory="$(SolutionDir)output\$(ConfigurationName)\x64\"
-			IntermediateDirectory="$(ConfigurationName)\x64\"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="2"
@@ -271,7 +274,11 @@
 				PreprocessorDefinitions="_LIB;JAS_WIN_MSVC_BUILD;WIN32;_DEBUG;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="1"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=".\Unicode_Debug/cximage.pch"
+				AssemblerListingLocation=".\Unicode_Debug/"
+				ObjectFile=".\Unicode_Debug/"
+				ProgramDataBaseFileName=".\Unicode_Debug/"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 				DebugInformationFormat="3"
@@ -289,6 +296,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile=".\Unicode_Debug\cximage.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -311,8 +319,8 @@
 		</Configuration>
 		<Configuration
 			Name="Unicode Release|Win32"
-			OutputDirectory="$(SolutionDir)output\$(ConfigurationName)\x86\"
-			IntermediateDirectory="$(ConfigurationName)\x86\"
+			OutputDirectory=".\Unicode_Release"
+			IntermediateDirectory=".\Unicode_Release"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="2"
@@ -341,8 +349,12 @@
 				AdditionalIncludeDirectories="..\jpeg,..\png,..\zlib,..\mng,..\tiff,..\j2k,..\jasper\include"
 				PreprocessorDefinitions="_LIB;JAS_WIN_MSVC_BUILD;WIN32;NDEBUG;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS"
 				StringPooling="true"
-				RuntimeLibrary="0"
+				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile=".\Unicode_Release/cximage.pch"
+				AssemblerListingLocation=".\Unicode_Release/"
+				ObjectFile=".\Unicode_Release/"
+				ProgramDataBaseFileName=".\Unicode_Release/"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 			/>
@@ -359,6 +371,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile=".\Unicode_Release\cximage.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -369,6 +382,8 @@
 			/>
 			<Tool
 				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Unicode_Release/cximage.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -379,8 +394,8 @@
 		</Configuration>
 		<Configuration
 			Name="Unicode Release|x64"
-			OutputDirectory="$(SolutionDir)output\$(ConfigurationName)\x64\"
-			IntermediateDirectory="$(ConfigurationName)\x64\"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="2"
@@ -410,8 +425,12 @@
 				AdditionalIncludeDirectories="..\jpeg,..\png,..\zlib,..\mng,..\tiff,..\j2k,..\jasper\include"
 				PreprocessorDefinitions="_LIB;JAS_WIN_MSVC_BUILD;WIN32;NDEBUG;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS"
 				StringPooling="true"
-				RuntimeLibrary="0"
+				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile=".\Unicode_Release/cximage.pch"
+				AssemblerListingLocation=".\Unicode_Release/"
+				ObjectFile=".\Unicode_Release/"
+				ProgramDataBaseFileName=".\Unicode_Release/"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 			/>
@@ -428,6 +447,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				OutputFile=".\Unicode_Release\cximage.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -438,6 +458,8 @@
 			/>
 			<Tool
 				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Unicode_Release/cximage.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
