@@ -73,13 +73,13 @@ BOOL DlgCombine::OnInitDialog()
 			ASSERT(pDoc->IsKindOf(RUNTIME_CLASS(CDemoDoc)));
 			CString title = pDoc->GetTitle();
 			m_imgr.AddString(title);
-			m_imgr.SetItemData(m_imgr.GetCount()-1, (DWORD)pDoc);
+			m_imgr.SetItemData(m_imgr.GetCount()-1, (DWORD_PTR)pDoc);
 			m_imgg.AddString(title);
-			m_imgg.SetItemData(m_imgg.GetCount()-1, (DWORD)pDoc);
+			m_imgg.SetItemData(m_imgg.GetCount()-1, (DWORD_PTR)pDoc);
 			m_imgb.AddString(title);
-			m_imgb.SetItemData(m_imgb.GetCount()-1, (DWORD)pDoc);
+			m_imgb.SetItemData(m_imgb.GetCount()-1, (DWORD_PTR)pDoc);
 			m_imga.AddString(title);
-			m_imga.SetItemData(m_imga.GetCount()-1, (DWORD)pDoc);
+			m_imga.SetItemData(m_imga.GetCount()-1, (DWORD_PTR)pDoc);
 		}
 	}
 	m_imgr.SetCurSel(0);
