@@ -187,7 +187,7 @@ typedef struct {
 
 } jpc_dec_ccp_t;
 
-/* Coding paramters. */
+/* Coding parameters. */
 
 typedef struct {
 
